@@ -93,7 +93,7 @@ function getPasswordChoices() {
 // function for generating random element from an array
 
 function getRandom(arr) {
-  var randGen = math.floor(math.random() * arr.length);
+  var randGen = Math.floor(Math.random() * arr.length);
   var randElement = arr[randGen];
 
   return randElement;
@@ -139,7 +139,7 @@ function generatePassword() {
 
   if (choices.useUpperCase) {
     possibleChoices = possibleChoices.concat(upperCase);
-    useCharacterOnce = push.getRandom(upperCase);
+    useCharacterOnce.push(getRandom(upperCase));
   }
 
   //for loop to iterate over length of password chosen and select random possible choices
