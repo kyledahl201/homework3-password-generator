@@ -13,6 +13,9 @@ var upperCase = [
 var specialCharacters [
   '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=' 
 ]
+var numbers = [
+  '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+]
 
 //function to ask user for password inputs
 
@@ -44,15 +47,32 @@ function getPassword() {
   // variable to store answer if using uppercase letters 
 
   var useUpperCase = confirm (
-    "Click OK to use Upper Case letters in your password."
+    "Click OK to use upper case letters in your password."
   );
 
   // variable to store answer if using lowercase letters 
   var useLowerCase = confirm (
-    "Click OK to use Lower Case letters in your password."
+    "Click OK to use lower case letters in your password."
+  );
+
+  // variable to store answer if using numbers 
+  var useNumbers = confirm (
+    "Click OK to use numbers in your password."
   );
 
   // conditional to make sure user selected one choice of characters 
+
+  if (
+    useLowerCase === false &&
+    useNumbers=== false &&
+    useSpecialCharacters=== false &&
+    useUpperCase=== false &&
+  ) {
+    alert("Yous select at least one character input!");
+    return;
+  }
+
+
 
   //object to store user choices as variable 
 
