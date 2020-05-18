@@ -37,12 +37,20 @@ function getPassword() {
   }
 
   // variable to store answer if special characters are to be used
-  var useSpecialCharacters = confirm("Choose OK to use special characters.");
-  return;
+  var useSpecialCharacters = confirm(
+    "Click OK to use special characters in your password.");
+  
 
   // variable to store answer if using uppercase letters 
 
+  var useUpperCase = confirm (
+    "Click OK to use Upper Case letters in your password."
+  );
+
   // variable to store answer if using lowercase letters 
+  var useLowerCase = confirm (
+    "Click OK to use Lower Case letters in your password."
+  );
 
   // conditional to make sure user selected one choice of characters 
 
