@@ -92,13 +92,32 @@ function getPasswordChoices() {
 
 // function for generating random element from an array
 
+function getRandom(arr) {
+  var randGen = math.floor(math.random() * arr.length);
+  var randElement = arr[randGen];
+
+  return randElement;
+
+}
+
 // function to generate password form user choices 
+
+function generatePassword() {
+  var choices = getPasswordChoices();
+}
 
 //variable to store passsword generated 
 
+var result = [];
+
 // array to store types of characters used 
 
+var = possibleCharacters [];
+
+
 //array to make sure each character will get used once 
+
+var = useCharacterOnce = [];
 
 // conditional statement to concatinate choices into password
 
