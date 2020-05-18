@@ -8,7 +8,7 @@ var lowerCase = [
   'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ]
 var upperCase = [
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' 
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ]
 var specialCharacters [
   '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=' 
@@ -19,7 +19,7 @@ var numbers = [
 
 //function to ask user for password inputs
 
-function getPassword() {
+function getPasswordChoices() {
   //variable for user's password length
   var length = parseInt(
     prompt("How long would you like your password to be?")
@@ -42,21 +42,21 @@ function getPassword() {
   // variable to store answer if special characters are to be used
   var useSpecialCharacters = confirm(
     "Click OK to use special characters in your password.");
-  
+
 
   // variable to store answer if using uppercase letters 
 
-  var useUpperCase = confirm (
+  var useUpperCase = confirm(
     "Click OK to use upper case letters in your password."
   );
 
   // variable to store answer if using lowercase letters 
-  var useLowerCase = confirm (
+  var useLowerCase = confirm(
     "Click OK to use lower case letters in your password."
   );
 
   // variable to store answer if using numbers 
-  var useNumbers = confirm (
+  var useNumbers = confirm(
     "Click OK to use numbers in your password."
   );
 
@@ -64,9 +64,9 @@ function getPassword() {
 
   if (
     useLowerCase === false &&
-    useNumbers=== false &&
-    useSpecialCharacters=== false &&
-    useUpperCase=== false &&
+    useNumbers === false &&
+    useSpecialCharacters === false &&
+    useUpperCase === false 
   ) {
     alert("Yous select at least one character input!");
     return;
@@ -76,31 +76,45 @@ function getPassword() {
 
   //object to store user choices as variable 
 
-  // function for generating random element from an array
+  var passwordChoices = {
+    length: length,
+    useLowerCase: useLowerCase,
+    useUpperCase: useUpperCase,
+    useSpecialCharacters: useSpecialCharacters,
+    useNumbers: useNumbers
+  }
 
-  // function to generate password form user choices 
-
-  //variable to store passsword generated 
-
-  // array to store types of characters used 
-
-  //array to make sure each character will get used once 
-
-  // conditional statement to concatinate choices into password
-
-  //for loop to iterate over length of password chosen and select random possible choices
-
-  // make sure at least one guarunteed character is in 
-
-  // turn result into string and pass into variable 
-
- 
-
- 
-
-
+  return passwordChoices;
 
 }
+
+
+
+// function for generating random element from an array
+
+// function to generate password form user choices 
+
+//variable to store passsword generated 
+
+// array to store types of characters used 
+
+//array to make sure each character will get used once 
+
+// conditional statement to concatinate choices into password
+
+//for loop to iterate over length of password chosen and select random possible choices
+
+// make sure at least one guarunteed character is in 
+
+// turn result into string and pass into variable 
+
+
+
+
+
+
+
+
 
 //reference #generate 
 
