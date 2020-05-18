@@ -121,6 +121,26 @@ var = useCharacterOnce = [];
 
 // conditional statement to concatinate choices into password
 
+if (choices.useSpecialCharacters) {
+  possibleCharacters = possibleCharacters.concat(specialCharacters);
+  useCharacterOnce.push(getRandom(specialCharacters));
+}
+
+if (choices.useNumbers) {
+possibleCharacters = possibleCharacters.concat(numbers);
+useCharacterOnce.push(getRandom(numbers));
+}
+
+if (choices.useLowerCase) {
+  possibleCharacters = possibleCharacters.concat(lowerCase);
+  useCharacterOnce.push(getRandom(lowerCase));
+}
+
+if (choices.useUpperCase) {
+  possibleCharacters = possibleCharacters.concat(upperCase);
+  useCharacterOnce = push.(getRandom(upperCase));
+}
+
 //for loop to iterate over length of password chosen and select random possible choices
 
 // make sure at least one guarunteed character is in 
