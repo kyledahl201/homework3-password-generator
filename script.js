@@ -10,8 +10,8 @@ var lowerCase = [
 var upperCase = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ]
-var specialCharacters [
-  '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=' 
+var specialCharacters = [
+  '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '='
 ]
 var numbers = [
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
@@ -66,7 +66,7 @@ function getPasswordChoices() {
     useLowerCase === false &&
     useNumbers === false &&
     useSpecialCharacters === false &&
-    useUpperCase === false 
+    useUpperCase === false
   ) {
     alert("Yous select at least one character input!");
     return;
@@ -104,60 +104,66 @@ function getRandom(arr) {
 
 function generatePassword() {
   var choices = getPasswordChoices();
+
+
+
+  //variable to store passsword generated 
+
+  var result = [];
+
+  // array to store types of characters used 
+
+  var possibleChoices = [];
+
+
+  //array to make sure each character will get used once 
+
+  var useCharacterOnce = [];
+
+  // conditional statement to concatinate choices into password
+
+  if (choices.useSpecialCharacters) {
+    possibleChoices = possibleChoices.concat(specialCharacters);
+    useCharacterOnce.push(getRandom(specialCharacters));
+  }
+
+  if (choices.useNumbers) {
+    possibleChoices = possibleChoices.concat(numbers);
+    useCharacterOnce.push(getRandom(numbers));
+  }
+
+  if (choices.useLowerCase) {
+    possibleChoices = possibleChoices.concat(lowerCase);
+    useCharacterOnce.push(getRandom(lowerCase));
+  }
+
+  if (choices.useUpperCase) {
+    possibleChoices = possibleChoices.concat(upperCase);
+    useCharacterOnce = push.getRandom(upperCase);
+  }
+
+  //for loop to iterate over length of password chosen and select random possible choices
+  for (var i = 0; i < choices.length; i++) {
+    var possibleChoice = getRandom(possibleChoices)
+
+    result.push(possibleChoice);
+  }
+
+
+  // make sure at least one guarunteed character is in 
+
+  for (var i = 0; i < useCharacterOnce.length; i++) {
+    result[i] = useCharacterOnce[i];
+  }
+
+  // turn result into string and pass into variable 
+
+  return result.join("");
+
+
+
 }
 
-//variable to store passsword generated 
-
-var result = [];
-
-// array to store types of characters used 
-
-var = possibleChoices [];
-
-
-//array to make sure each character will get used once 
-
-var = useCharacterOnce = [];
-
-// conditional statement to concatinate choices into password
-
-if (choices.useSpecialCharacters) {
-  possibleChoices = possibleChoices.concat(specialCharacters);
-  useCharacterOnce.push(getRandom(specialCharacters));
-}
-
-if (choices.useNumbers) {
-possibleChoices = possibleChoices.concat(numbers);
-useCharacterOnce.push(getRandom(numbers));
-}
-
-if (choices.useLowerCase) {
-  possibleChoices = possibleChoices.concat(lowerCase);
-  useCharacterOnce.push(getRandom(lowerCase));
-}
-
-if (choices.useUpperCase) {
-  possibleChoices = possibleChoices.concat(upperCase);
-  useCharacterOnce = push.(getRandom(upperCase));
-}
-
-//for loop to iterate over length of password chosen and select random possible choices
-for (var i = 0; i < choices.length; i++) {
-  var possibleChoice = getRandom(possibleChoices)
-
-  result.push(possibleChoice);
-}
-
-
-// make sure at least one guarunteed character is in 
-
-for (var i = 0; i < useCharacterOnce.length; i++) {
-  result[i] = useCharacterOnce[i];
-}
-
-// turn result into string and pass into variable 
-
-return result.join("");
 
 
 //reference #generate 
