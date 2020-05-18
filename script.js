@@ -14,7 +14,24 @@ var specialCharacters [
   '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=' 
 ]
 
+//function to ask user for password inputs
 
+function getPassword() {
+  //variable for user's password length
+  var length = parseInt(
+    prompt("How long would you like your password to be?")
+  );
+
+  //make sure password is a number with isnan
+
+  if (isNaN(length) === true) {
+    alert("Write a number for length please!");
+    return;
+  }
+
+
+
+}
 
 
 
