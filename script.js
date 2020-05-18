@@ -29,11 +29,52 @@ function getPassword() {
     return;
   }
 
+  //conditional to check if length is between 8 and 128 characters
+
+  if (length < 8 || length > 128) {
+    alert("Please choose a password between 8 and 128 characters in length.");
+    return;
+  }
+
+  // variable to store answer if special characters are to be used
+  var useSpecialCharacters = confirm("Choose OK to use special characters.");
+  return;
+
+  // variable to store answer if using uppercase letters 
+
+  // variable to store answer if using lowercase letters 
+
+  // conditional to make sure user selected one choice of characters 
+
+  //object to store user choices as variable 
+
+  // function for generating random element from an array
+
+  // function to generate password form user choices 
+
+  //variable to store passsword generated 
+
+  // array to store types of characters used 
+
+  //array to make sure each character will get used once 
+
+  // conditional statement to concatinate choices into password
+
+  //for loop to iterate over length of password chosen and select random possible choices
+
+  // make sure at least one guarunteed character is in 
+
+  // turn result into string and pass into variable 
+
+ 
+
+ 
+
 
 
 }
 
-
+//reference #generate 
 
 // Write password to the #password input
 function writePassword() {
